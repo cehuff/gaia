@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"time"
 
@@ -58,7 +59,8 @@ func CreateIngress(args sdk.Arguments) error {
 	// lets sleep to simulate that we do something
 	time.Sleep(5 * time.Second)
 	log.Println("CreateIngress has been finished!")
-	return nil
+	return fmt.Errorf("fail create ingress")
+	// return nil
 }
 
 func Cleanup(args sdk.Arguments) error {
